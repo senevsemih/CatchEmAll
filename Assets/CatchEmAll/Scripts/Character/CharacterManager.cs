@@ -1,4 +1,5 @@
-﻿using Assets.CatchEmAll.Scripts.Input;
+﻿using Assets.CatchEmAll.Scripts.Gun;
+using Assets.CatchEmAll.Scripts.Input;
 using UnityEngine;
 
 namespace Assets.CatchEmAll.Scripts.Character
@@ -9,6 +10,8 @@ namespace Assets.CatchEmAll.Scripts.Character
         [SerializeField] private InputData _ınputData;
 
         private const float FlipThreshHold = 0f;
+
+        private GunManager _gunManager;
         
         private Rigidbody2D _characterRb;
         private Quaternion _currentRotation;
@@ -16,11 +19,17 @@ namespace Assets.CatchEmAll.Scripts.Character
         private void Awake()
         {
             _characterRb = GetComponent<Rigidbody2D>();
+            _gunManager = GetComponentInChildren<GunManager>();
             _currentRotation = transform.rotation;
         }
 
         private void Update()
         {
+            if (UnityEngine.Input.GetMouseButtonDown(0))
+            {   
+                _gunManager.FireProjectile();
+            }
+            
             CharacterFlip(CalculateFlip());
         }
 
@@ -35,15 +44,15 @@ namespace Assets.CatchEmAll.Scripts.Character
                 _characterRb.velocity.y);
         }
 
-        private void CharacterFlip(float index)
+        private void CharacterFlip(Vector2 index)
         {
-            if (index < FlipThreshHold)
+            if (index.x < FlipThreshHold)
             {
                 transform.rotation =
                     Quaternion.Lerp(transform.rotation,
                         _characterSettings.FlipRotation, Time.deltaTime * _characterSettings.FlipSpeed);
             }
-            else if (index >= FlipThreshHold)
+            else if (index.x >= FlipThreshHold)
             {
                 transform.rotation =
                     Quaternion.Lerp(transform.rotation,
@@ -51,9 +60,9 @@ namespace Assets.CatchEmAll.Scripts.Character
             }
         }
 
-        private float CalculateFlip()
+        private Vector2 CalculateFlip()
         {
-            return _ınputData.MousePosition.x - transform.position.x;
+            return _ınputData.MousePosition - transform.position;
         }
     }
 }

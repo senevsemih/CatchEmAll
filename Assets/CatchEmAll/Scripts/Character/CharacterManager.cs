@@ -1,0 +1,59 @@
+﻿using Assets.CatchEmAll.Scripts.Input;
+using UnityEngine;
+
+namespace Assets.CatchEmAll.Scripts.Character
+{
+    public class CharacterManager : MonoBehaviour
+    {
+        [SerializeField] private CharacterSettings _characterSettings;
+        [SerializeField] private InputData _ınputData;
+
+        private const float FlipThreshHold = 0f;
+        
+        private Rigidbody2D _characterRb;
+        private Quaternion _currentRotation;
+
+        private void Awake()
+        {
+            _characterRb = GetComponent<Rigidbody2D>();
+            _currentRotation = transform.rotation;
+        }
+
+        private void Update()
+        {
+            CharacterFlip(CalculateFlip());
+        }
+
+        private void FixedUpdate()
+        {
+            CharacterMovement(_ınputData.Horizontal);
+        }
+
+        private void CharacterMovement(float direction)
+        {
+            _characterRb.velocity = new Vector2(direction * Time.fixedDeltaTime * _characterSettings.MovementSpeed,
+                _characterRb.velocity.y);
+        }
+
+        private void CharacterFlip(float index)
+        {
+            if (index < FlipThreshHold)
+            {
+                transform.rotation =
+                    Quaternion.Lerp(transform.rotation,
+                        _characterSettings.FlipRotation, Time.deltaTime * _characterSettings.FlipSpeed);
+            }
+            else if (index >= FlipThreshHold)
+            {
+                transform.rotation =
+                    Quaternion.Lerp(transform.rotation,
+                        _currentRotation, Time.deltaTime * _characterSettings.FlipSpeed);
+            }
+        }
+
+        private float CalculateFlip()
+        {
+            return _ınputData.MousePosition.x - transform.position.x;
+        }
+    }
+}

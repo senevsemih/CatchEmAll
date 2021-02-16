@@ -11,14 +11,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Gun/GunSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Character/CharacterManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Input/InputData.cs" />
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Input/InputController.cs" />
-      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Character/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Character/CharacterSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Gun/GunSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Input/InputData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Character/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Gun/GunManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oZBS8dfcyi1lJAo31IYy41QqJF" />

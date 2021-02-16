@@ -444,6 +444,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1893752563524299225, guid: d6eee83cb92a1b7459834a4e79db2b0d,
+        type: 3}
+      propertyPath: _projectileSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 41ecd136a8bf8af428229162d6812903,
+        type: 2}
     - target: {fileID: 1893752563524299227, guid: d6eee83cb92a1b7459834a4e79db2b0d,
         type: 3}
       propertyPath: m_LocalScale.y

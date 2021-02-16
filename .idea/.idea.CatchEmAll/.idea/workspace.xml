@@ -22,8 +22,8 @@
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Input/InputData.cs" />
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Character/CharacterManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Gun/GunManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CatchEmAll/Scripts/Projectile/ProjectileManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oZBS8dfcyi1lJAo31IYy41QqJF" />

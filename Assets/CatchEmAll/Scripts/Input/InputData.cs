@@ -6,9 +6,9 @@ namespace Assets.CatchEmAll.Scripts.Input
     public class InputData : ScriptableObject
     {
         [SerializeField] private float _horizontal;
-        [SerializeField] private Vector2 _mousePosition;
+        [SerializeField] private Vector3 _mousePosition;
 
-        public Vector2 MousePosition
+        public Vector3 MousePosition
         {
             get => _mousePosition;
             set => _mousePosition = value;

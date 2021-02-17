@@ -9,6 +9,7 @@
         <e p="CatchEmAll" t="Include">
           <e p="Scripts" t="Include">
             <e p="Character" t="Include">
+              <e p="CharacterInteractionController.cs" t="Include" />
               <e p="CharacterManager.cs" t="Include" />
               <e p="CharacterSettings.cs" t="Include" />
             </e>

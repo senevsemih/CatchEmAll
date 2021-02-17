@@ -7,11 +7,11 @@ namespace Assets.CatchEmAll.Scripts.Projectile
     public class ProjectileSettings : ScriptableObject
     {
         [SerializeField] private ProjectileStates ProjectileStates
-            = ProjectileStates.Default;
+            = ProjectileStates.Non;
         [SerializeField] private float _projectileSpeed;
-        [SerializeField] private float _projectileAngle;
-        
-        
+        [SerializeField] private float _bouncyIndex;
+
+
         public ProjectileStates States
         {
             get => ProjectileStates;
@@ -19,12 +19,13 @@ namespace Assets.CatchEmAll.Scripts.Projectile
         }
 
         public float ProjectileSpeed => _projectileSpeed;
-        public float ProjectileAngle => _projectileAngle;
+        public float BouncyIndex => _bouncyIndex;
     }
 }
 
 public enum ProjectileStates
 {
+    Non,
     Default,
     Bouncy,
     FireBall

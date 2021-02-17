@@ -1,5 +1,4 @@
-﻿using Assets.CatchEmAll.Scripts.Gun;
-using Assets.CatchEmAll.Scripts.Input;
+﻿using Assets.CatchEmAll.Scripts.Input;
 using UnityEngine;
 
 namespace Assets.CatchEmAll.Scripts.Character
@@ -11,25 +10,17 @@ namespace Assets.CatchEmAll.Scripts.Character
 
         private const float FlipThreshHold = 0f;
 
-        private GunManager _gunManager;
-        
         private Rigidbody2D _characterRb;
         private Quaternion _currentRotation;
 
         private void Awake()
         {
             _characterRb = GetComponent<Rigidbody2D>();
-            _gunManager = GetComponentInChildren<GunManager>();
             _currentRotation = transform.rotation;
         }
 
         private void Update()
         {
-            if (UnityEngine.Input.GetMouseButtonDown(0))
-            {   
-                _gunManager.FireProjectile();
-            }
-            
             CharacterFlip(CalculateFlip());
         }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7253116856121627665}
   - component: {fileID: 5400981906141663202}
   - component: {fileID: 3753011877547990372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,13 +4765,13 @@ GameObject:
   - component: {fileID: 1775338964158883335}
   - component: {fileID: 8179712122195855529}
   - component: {fileID: 5943070954629638749}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1775338964158883335
 Transform:
   m_ObjectHideFlags: 0
@@ -9519,13 +9519,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2787199769597911918}
   - component: {fileID: 1543575214567052488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2787199769597911918
 Transform:
   m_ObjectHideFlags: 0
@@ -9594,7 +9594,7 @@ GameObject:
   - component: {fileID: -5960163354998318289}
   - component: {fileID: -2274565857187478553}
   - component: {fileID: -7675811982434632359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9609,7 +9609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7885190325739927557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -14.911236, y: 1.5149977, z: 0.00022726346}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 2787199769597911918}
@@ -9656,7 +9656,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 55c6423f2f949ed4eb9d7a79a2c6c260, type: 3}
   m_Color: {r: 0, g: 1, b: 0.84148383, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9664,7 +9664,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &-5960163354998318289
@@ -9718,3 +9718,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileSettings: {fileID: 11400000, guid: 41ecd136a8bf8af428229162d6812903,
     type: 2}
+  _particleSystem: {fileID: 848932692994998128}
+  _light: {fileID: 2525895460403413031}

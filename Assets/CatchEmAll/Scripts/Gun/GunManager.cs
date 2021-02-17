@@ -22,6 +22,20 @@ namespace Assets.CatchEmAll.Scripts.Gun
         
         private void Update()
         {
+            if (UnityEngine.Input.GetMouseButtonDown(0))
+            {
+                if (_projectileSettings.States == ProjectileStates.Default || 
+                    _projectileSettings.States == ProjectileStates.Bouncy || 
+                    _projectileSettings.States == ProjectileStates.FireBall)
+                {
+                    FireProjectile();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            
             GunRotation();
         }
 
@@ -32,7 +46,7 @@ namespace Assets.CatchEmAll.Scripts.Gun
             _gunPivot.rotation = Quaternion.Euler(0f, 0f, angle); 
         }
 
-        public void FireProjectile()
+        private void FireProjectile()
         {
             GameObject projectile = Instantiate(_projectilePrefab);
             projectile.transform.position = _projectileTransform.position;

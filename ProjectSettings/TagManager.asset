@@ -8,6 +8,8 @@ TagManager:
   - Projectile/Default
   - Projectile/Bouncy
   - Projectile/Fireball
+  - Ball
+  - Collectable/Key
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Collectable
   - Character
   - Projectile
-  - 
-  - 
+  - Ground
+  - PostProcessing
   - 
   - 
   - 
@@ -44,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 120760187
     locked: 0

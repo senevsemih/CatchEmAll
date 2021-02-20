@@ -9,6 +9,7 @@ namespace Assets.CatchEmAll.Scripts.Input
         private void Update()
         {
             _ınputData.Horizontal = UnityEngine.Input.GetAxis("Horizontal");
+            _ınputData.Jump = UnityEngine.Input.GetButtonDown("Jump");
 
             Vector2 mousePosition = UnityEngine.Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);

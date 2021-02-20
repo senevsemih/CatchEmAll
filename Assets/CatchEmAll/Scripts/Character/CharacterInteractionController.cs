@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Assets.CatchEmAll.Scripts.Projectile;
+using Assets.CatchEmAll.Scripts.UI;
 using UnityEngine;
 
 namespace Assets.CatchEmAll.Scripts.Character
@@ -7,6 +8,7 @@ namespace Assets.CatchEmAll.Scripts.Character
     public class CharacterInteractionController : MonoBehaviour
     {
         [SerializeField] private ProjectileSettings _projectileSettings;
+        [SerializeField] private UISettings _uıSettings;
         [SerializeField] private GameObject _gun;
         
         private const float LerpSpeed = 3f;
@@ -49,6 +51,15 @@ namespace Assets.CatchEmAll.Scripts.Character
             {
                 _projectileSettings.States = ProjectileStates.FireBall;
                 Collect(other);
+            }
+
+            if (GetTag(other, "Collectable/Key"))
+            {
+                if (!_uıSettings.Keys.Contains(other.gameObject))
+                {
+                    _uıSettings.Keys.Add(other.gameObject);
+                }
+                Destroy(other.gameObject);
             }
         }
 

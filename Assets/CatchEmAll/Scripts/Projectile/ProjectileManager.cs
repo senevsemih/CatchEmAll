@@ -10,7 +10,6 @@ namespace Assets.CatchEmAll.Scripts.Projectile
         private Rigidbody2D _projectileRb;
         
         [SerializeField] private GameObject _particleSystem;
-        [SerializeField] private GameObject _light;
 
         private void Awake()
         {
@@ -45,7 +44,6 @@ namespace Assets.CatchEmAll.Scripts.Projectile
                     break;
                 case ProjectileStates.FireBall:
                     _particleSystem.SetActive(true);
-                    _light.SetActive(true);
                     Destroy(gameObject, 5f);
                     break;
             }
